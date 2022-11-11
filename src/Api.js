@@ -10,5 +10,6 @@ export const GEO_LOCATION_OPTIONS = {
 
 export const WEATHER_API_KEY = "8266c4d1a21a9d0039cd1bd9a57145a3";
 
-export const WEATHER_BASE_URL =
-  "https://api.openweathermap.org/data/2.5/weather";
+export const WEATHER_BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
+
+export const FORECAST_BASE_URL = "https://api.openweathermap.org/data/2.5/forecast";

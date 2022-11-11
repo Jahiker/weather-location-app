@@ -5,12 +5,14 @@ import {
   GEO_LOCATION_OPTIONS,
   WEATHER_API_KEY,
   WEATHER_BASE_URL,
+  FORECAST_BASE_URL
 } from "../Api";
 
 export const useFetchData = () => {
   const [loading, setLoading] = useState(true);
   const [location, setLocation] = useState(null);
   const [weather, setWeather] = useState(null);
+  const [weekForecast, setWeekForecast] = useState(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -29,13 +31,21 @@ export const useFetchData = () => {
           });
 
         // Get weather by current location
-        await fetch(
-          `${WEATHER_BASE_URL}?lat=${locationIp.location.latitude}&lon=${locationIp.location.longitude}&appid=${WEATHER_API_KEY}&units=metric`
-        )
-          .then((resp) => resp.json())
-          .then((data) => {
-            setWeather(data);
-          });
+        const promiseCurrentWeather = fetch(`${WEATHER_BASE_URL}?lat=${locationIp.location.latitude}&lon=${locationIp.location.longitude}&appid=${WEATHER_API_KEY}&units=metric`)
+
+        const promiseWeekForecast = fetch(`${FORECAST_BASE_URL}?lat=${locationIp.location.latitude}&lon=${locationIp.location.longitude}&cnt=7&appid=${WEATHER_API_KEY}&units=metric`)
+
+        await Promise.all([promiseCurrentWeather, promiseWeekForecast])
+          .then(async (response) => {
+             const responseWeather = await response[0].json();
+             const responseWeekForecast = await response[1].json();
+
+             setWeather(responseWeather);
+             setWeekForecast(responseWeekForecast);
+          })
+          .catch((error) => {
+            throw new Error(error);
+          })
 
         setLoading(false);
       } catch (error) {
@@ -46,5 +56,5 @@ export const useFetchData = () => {
     getData();
   }, []);
 
-  return { loading, location, weather };
+  return { loading, location, weather, weekForecast };
 };

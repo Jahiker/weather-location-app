@@ -3,6 +3,7 @@
   --font-default: "Nunito", sans-serif, -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-alt: "Chakra Petch", sans-serif;
   --font-code: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 
@@ -75,7 +76,7 @@ code {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(90deg, #e1d6ff 0%, #ffffff 100%);
+  background-image: var(--grandient-bg);
   top: 0;
   left: 0;
   z-index: -1;

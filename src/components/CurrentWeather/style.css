@@ -20,7 +20,8 @@
 }
 
 .current_weather_header .temp {
-    font-weight: 900;
+    font-family: var(--font-alt);
+    font-weight: 700;
     font-size: 5rem;
 }
 

@@ -3,8 +3,12 @@ import React from "react";
 import "./style.css";
 
 export const CurrentWeather = ({ location, weather }) => {
+  console.log({
+    location,
+    weather
+  })
   return (
-    <div className="current_weather container">
+    <div className={`current_weather container ${weather.weather[0].icon}`}>
       <div className="current_weather_header">
         <h1 className="title">Weather Forecast</h1>
         <div className="icon">
