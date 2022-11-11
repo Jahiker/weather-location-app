@@ -2,15 +2,24 @@ import "./App.css";
 
 import { useFetchData } from "./hooks/useFetchData";
 
-import { CurrentWeather } from "./CurrentWeather";
+import { CurrentWeather } from "./components/CurrentWeather";
+import { Forecast } from "./components/Forecast";
 
 function App() {
   const { loading, location, weather } = useFetchData();
 
   return (
     <div className="App">
-      { loading && <h1>Loading...</h1> }
-      { !loading && <CurrentWeather location={location} weather={weather} /> }
+      { 
+        loading 
+          ? <h1>Loading...</h1> 
+          : (
+              <>
+                <CurrentWeather location={location} weather={weather} />
+                <Forecast />
+              </>
+            ) 
+      }
     </div>
   );
 }

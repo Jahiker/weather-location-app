@@ -30,7 +30,7 @@ export const useFetchData = () => {
 
         // Get weather by current location
         await fetch(
-          `${WEATHER_BASE_URL}?lat=${locationIp.latitude}&lon=${locationIp.longitude}&appid=${WEATHER_API_KEY}&units=metric`
+          `${WEATHER_BASE_URL}?lat=${locationIp.location.latitude}&lon=${locationIp.location.longitude}&appid=${WEATHER_API_KEY}&units=metric`
         )
           .then((resp) => resp.json())
           .then((data) => {

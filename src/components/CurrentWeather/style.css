@@ -1,0 +1,31 @@
+.current_weather_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.current_weather_header .title {
+    font-weight: 800;
+    font-size: 1.6rem;
+}
+
+.current_weather_header .icon {
+    width: 50px;
+}
+
+.current_weather_header .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.current_weather_header .temp {
+    font-weight: 900;
+    font-size: 5rem;
+}
+
+
+.current_weather_header .location {
+    font-size: 1.5rem;
+    color: var(--color-gray);
+}

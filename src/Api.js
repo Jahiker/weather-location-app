@@ -1,11 +1,10 @@
-export const GEO_LOCATION_URL =
-  "https://ip-geolocation-ipwhois-io.p.rapidapi.com/json/";
+export const GEO_LOCATION_URL = "https://ip-geo-location4.p.rapidapi.com/";
 
 export const GEO_LOCATION_OPTIONS = {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "8e91837f59msh1a58bfdb214820dp1a6cf1jsn6fb87a07b320",
-    "X-RapidAPI-Host": "ip-geolocation-ipwhois-io.p.rapidapi.com",
+    "X-RapidAPI-Host": "ip-geo-location4.p.rapidapi.com",
   },
 };
 
