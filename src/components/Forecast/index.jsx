@@ -35,6 +35,12 @@ export const Forecast = ({ weekForecast }) => {
     <div className="container forecast_week">
       <Slider {...settings}>
         {weekForecast.list.map((dayWeather) => {
+          const date =  new Date(dayWeather.dt_txt);
+          const day = date.getDay();
+          const month = date.getMonth();
+
+          console.log({date, day, month})
+
           return (
             <div className="forecast-item" key={`forecast-${dayWeather.dt}`}>
               <div className={`item-content bg_${dayWeather.weather[0].icon}`}>

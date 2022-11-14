@@ -38,12 +38,59 @@
   --shadow-box: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 
+.bg_01d {
+  background-image: var(--gradient-01d);
+}
+.bg_01n {
+  background-image: var(--gradient-01n);
+}
+.bg_02d {
+  background-image: var(--gradient-02d);
+}
+.bg_02n {
+  background-image: var(--gradient-02n);
+}
+.bg_03d {
+  background-image: var(--gradient-03d);
+}
+.bg_03n {
+  background-image: var(--gradient-03n);
+}
 .bg_04d {
   background-image: var(--gradient-04d);
 }
-
 .bg_04n {
   background-image: var(--gradient-04n);
+}
+.bg_09d {
+  background-image: var(--gradient-09d);
+}
+.bg_09n {
+  background-image: var(--gradient-09n);
+}
+.bg_10d {
+  background-image: var(--gradient-10d);
+}
+.bg_10n {
+  background-image: var(--gradient-10n);
+}
+.bg_11d {
+  background-image: var(--gradient-11d);
+}
+.bg_11n {
+  background-image: var(--gradient-11n);
+}
+.bg_13d {
+  background-image: var(--gradient-13d);
+}
+.bg_13n {
+  background-image: var(--gradient-13n);
+}
+.bg_50d {
+  background-image: var(--gradient-50d);
+}
+.bg_50n {
+  background-image: var(--gradient-50n);
 }
 
 * {
