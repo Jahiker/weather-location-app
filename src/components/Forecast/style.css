@@ -1,0 +1,41 @@
+.forecast-item {
+    width: 100%;
+    aspect-ratio: 2/4;
+    padding: 5px;
+}
+
+.forecast-item .item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-box);
+}
+
+.forecast-item .item-content .date {
+    text-align: center;
+}
+
+.forecast-item .figure {
+    width: 50%;
+}
+
+.forecast-item .figure img{
+    width: 100%;
+    height: auto;
+}
+
+.forecast_week .slick-prev {
+    left: -18px;
+}
+
+.forecast_week .slick-next {
+    right: -18px;
+}
+
+button.slick-arrow::before {
+    color: var(--color-gray);
+}

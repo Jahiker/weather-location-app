@@ -38,6 +38,14 @@
   --shadow-box: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 
+.bg_04d {
+  background-image: var(--gradient-04d);
+}
+
+.bg_04n {
+  background-image: var(--gradient-04n);
+}
+
 * {
   margin: 0;
   padding: 0;

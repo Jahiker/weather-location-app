@@ -6,7 +6,7 @@ import { CurrentWeather } from "./components/CurrentWeather";
 import { Forecast } from "./components/Forecast";
 
 function App() {
-  const { loading, location, weather } = useFetchData();
+  const { loading, location, weather, weekForecast } = useFetchData();
 
   return (
     <div className="App">
@@ -16,7 +16,7 @@ function App() {
           : (
               <>
                 <CurrentWeather location={location} weather={weather} />
-                <Forecast />
+                <Forecast weekForecast={weekForecast} />
               </>
             ) 
       }
