@@ -36,14 +36,22 @@ export const Forecast = ({ weekForecast }) => {
       <Slider {...settings}>
         {weekForecast.list.map((dayWeather) => {
           const date =  new Date(dayWeather.dt_txt);
+          
           const day = date.getDay();
           const month = date.getMonth();
 
           console.log({date, day, month})
 
+          const itemContentStyles = {
+            backgroundImage: `url(backgrounds/${dayWeather.weather[0].icon}.webp)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }
+
           return (
             <div className="forecast-item" key={`forecast-${dayWeather.dt}`}>
-              <div className={`item-content bg_${dayWeather.weather[0].icon}`}>
+              <div className={`item-content`} style={itemContentStyles}>
                 <p className="date">{dayWeather.dt_txt}</p>
                 <div className="figure">
                   <img
