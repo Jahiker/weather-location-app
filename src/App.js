@@ -1,9 +1,8 @@
-import "./App.css";
-
 import { useFetchData } from "./hooks/useFetchData";
 
 import { CurrentWeather } from "./components/CurrentWeather";
 import { Forecast } from "./components/Forecast";
+import { Spinner } from "./components/Spinner";
 
 function App() {
   const { loading, location, weather, weekForecast } = useFetchData();
@@ -12,7 +11,7 @@ function App() {
     <div className="App">
       { 
         loading 
-          ? <h1>Loading...</h1> 
+          ? <Spinner /> 
           : (
               <>
                 <CurrentWeather location={location} weather={weather} />

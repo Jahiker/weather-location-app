@@ -107,7 +107,8 @@ html {
 }
 
 body {
-  background-color: var(--color-bg);
+  /* background-color: var(--color-bg); */
+  background-color: #ffffff;
   padding: 20px;
 }
 
