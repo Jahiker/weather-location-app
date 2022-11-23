@@ -2,6 +2,7 @@ import { useFetchData } from "./hooks/useFetchData";
 
 import { CurrentWeather } from "./components/CurrentWeather";
 import { Forecast } from "./components/Forecast";
+import { Tabs } from "./components/Tabs";
 import { Spinner } from "./components/Spinner";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
               <>
                 <CurrentWeather location={location} weather={weather} />
                 <Forecast weekForecast={weekForecast} />
+                <Tabs weekForecast={weekForecast} />
               </>
             ) 
       }
