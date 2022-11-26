@@ -18,7 +18,7 @@ export const useFetchData = () => {
     const getData = async () => {
       try {
         // Get IP info
-        const ipInfo = await fetch("https://ipv4.jsonip.com/")
+        const ipInfo = await fetch("https://ipv4.jsonip.com")
           .then((response) => response.json())
           .then((data) => data);
 

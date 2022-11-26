@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export const Forecast = ({ weekForecast }) => {
-  console.log({ weekForecast: weekForecast.list });
+  // console.log({ weekForecast: weekForecast.list });
 
   const settings = {
     dots: false,
@@ -35,12 +35,6 @@ export const Forecast = ({ weekForecast }) => {
     <div className="container forecast_week">
       <Slider {...settings}>
         {weekForecast.list.map((dayWeather) => {
-          const date =  new Date(dayWeather.dt_txt);
-          
-          const day = date.getDay();
-          const month = date.getMonth();
-
-          console.log({date, day, month})
 
           const itemContentStyles = {
             backgroundImage: `url(backgrounds/${dayWeather.weather[0].icon}.webp)`,

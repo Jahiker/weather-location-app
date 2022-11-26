@@ -1,10 +1,10 @@
 import React from "react";
-import { Chart } from "../Chart";
+import { ChartComponent } from "../ChartComponent";
 import { handleClick } from "../../helpers/tabs";
 
 import "./style.css";
 
-export const Tabs = () => {
+export const Tabs = ({ weekForecast }) => {
   return (
     <div className="container tabs">
       <div className="tabs_container">
@@ -28,16 +28,16 @@ export const Tabs = () => {
 
       <div className="contents_container">
         <div id="wind" className="tab_content active">
-          <Chart content={"Wind"} />
+          <ChartComponent content={"Wind"} weekForecast={weekForecast} />
         </div>
         <div id="rain" className="tab_content">
-          <Chart content={"Rain"} />
+          <ChartComponent content={"Rain"} weekForecast={weekForecast} />
         </div>
         <div id="humidity" className="tab_content">
-          <Chart content={"Humiduty"} />
+          <ChartComponent content={"Humiduty"} weekForecast={weekForecast} />
         </div>
         <div id="pressure" className="tab_content">
-          <Chart content={"Pressure"} />
+          <ChartComponent content={"Pressure"} weekForecast={weekForecast} />
         </div>
       </div>
     </div>
