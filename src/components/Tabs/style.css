@@ -5,3 +5,40 @@
 .tab_content.active {
     display: block;
 }
+
+.tabs_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.tabs_container .tab {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid var(--color-dark);
+    padding: 3px 15px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-family: var(--font-default);
+}
+
+.tabs_container .tab.active {
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+    .tabs_container {
+        gap: 10px;
+    }
+
+    .tabs_container .tab {
+        padding: 5px 30px;
+        font-size: 1rem;
+    }
+}

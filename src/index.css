@@ -12,6 +12,7 @@
   --color-light: #f5f5f5;
   --color-dark: #000000;
   --color-gray: #929292;
+  --color-accent: #826ED7;
 
   /* Gradients */
   --grandient-bg: linear-gradient(90deg, #c5b2f9 0%, #ffffff 100%);

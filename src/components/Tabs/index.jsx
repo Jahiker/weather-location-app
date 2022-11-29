@@ -7,8 +7,9 @@ import { useContentTab } from "../../hooks/useContentTab";
 import "./style.css";
 
 export const Tabs = ({ weekForecast }) => {
-  
-  const { labels, wind, humidity, pressure } = useContentTab(weekForecast.list);
+  const { labels, clouds, wind, humidity, pressure } = useContentTab(
+    weekForecast.list
+  );
 
   return (
     <div className="container tabs">
@@ -20,9 +21,9 @@ export const Tabs = ({ weekForecast }) => {
         >
           Wind
         </button>
-        {/* <button onClick={handleClick} className="tab" data-target="#rain">
-          Rain
-        </button> */}
+        <button onClick={handleClick} className="tab" data-target="#clouds">
+          Clouds
+        </button>
         <button onClick={handleClick} className="tab" data-target="#humidity">
           Humiduty
         </button>
@@ -33,16 +34,36 @@ export const Tabs = ({ weekForecast }) => {
 
       <div className="contents_container">
         <div id="wind" className="tab_content active">
-          <ChartComponent content={"Wind"} weekForecast={wind} labels={labels} />
+          <ChartComponent
+            content={"Wind"}
+            weekForecast={wind}
+            labels={labels}
+            unit={"Wind m/s"}
+          />
         </div>
-        {/* <div id="rain" className="tab_content">
-          <ChartComponent content={"Rain"} weekForecast={weekForecast} labels={labels} />
-        </div> */}
+        <div id="clouds" className="tab_content">
+          <ChartComponent
+            content={"Clouds"}
+            weekForecast={clouds}
+            labels={labels}
+            unit={"Clouds %"}
+          />
+        </div>
         <div id="humidity" className="tab_content">
-          <ChartComponent content={"Humiduty"} weekForecast={humidity} labels={labels} />
+          <ChartComponent
+            content={"Humiduty"}
+            weekForecast={humidity}
+            labels={labels}
+            unit={"Humidity %"}
+          />
         </div>
         <div id="pressure" className="tab_content">
-          <ChartComponent content={"Pressure"} weekForecast={pressure} labels={labels} />
+          <ChartComponent
+            content={"Pressure"}
+            weekForecast={pressure}
+            labels={labels}
+            unit={"Pressure hPa"}
+          />
         </div>
       </div>
     </div>

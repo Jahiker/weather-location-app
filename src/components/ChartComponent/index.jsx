@@ -25,12 +25,7 @@ ChartJS.register(
 );
 
 
-export const ChartComponent = ({ content, weekForecast, labels }) => {
-  // console.log({
-  //   content,
-  //   weekForecast: weekForecast.list,
-  //   labels
-  // });
+export const ChartComponent = ({ content, weekForecast, labels, unit }) => {
 
   const options = {
     responsive: true,
@@ -50,10 +45,10 @@ export const ChartComponent = ({ content, weekForecast, labels }) => {
     datasets: [
       {
         fill: true,
-        label: "Temp ºC",
+        label: unit,
         data: weekForecast,
-        borderColor: "rgb(53, 162, 235)",
-        backgroundColor: "rgba(53, 162, 235, 0.5)",
+        borderColor: "#826ED7",
+        backgroundColor: "rgba(87,89,186,0.6)",
       },
     ],
   };
