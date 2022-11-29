@@ -4,7 +4,6 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "./style.css";
 
 export const Map = ({location}) => {
-    console.log(location);
   return (
     <div className="container map">
       <MapContainer center={[location.location.latitude, location.location.longitude]} zoom={13} scrollWheelZoom={false} style={{height: '300px'}}>

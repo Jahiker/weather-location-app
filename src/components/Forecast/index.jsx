@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export const Forecast = ({ weekForecast }) => {
-  // console.log({ weekForecast: weekForecast.list });
 
   const settings = {
     dots: false,
